@@ -1,5 +1,5 @@
 <img src=https://img.shields.io/badge/python-3.10-violet> <img src=https://img.shields.io/badge/style-black-green>
-<img src=https://img.shields.io/badge/open_in-English-blue>
+<a href="./README-EN.md"><img src=https://img.shields.io/badge/open_in-English-blue>
 > [!Note]
 > На момент 13.01.24 Api которое позволяло генерировать рецепты не работает, когда api снова будет функционировать это примечание исчезнет
 # Neuro-cook-API 
