@@ -68,17 +68,12 @@ class BaseDao:
                 return None
 
     @classmethod
-    async def update_data(cls,update_data,**filter_by):
+    async def update_data(cls,id_user,column,update_data):
         async with async_session_maker() as session:
             try:
-                query = select(cls.model).filter_by(**filter_by)
-                instance = await session.execute(query)
-                model_instance = instance.scalar_one()
 
-                # Присваиваем новые значения из update_data соответствующим полям модели
-                for key, value in update_data.items():
-                    setattr(model_instance, key, value)
-
+                query = await session.get(cls.model,id_user)
+                setattr(query,column,update_data)
                 await session.commit()
             except (SQLAlchemyError, Exception) as e:
                 if isinstance(e, SQLAlchemyError):

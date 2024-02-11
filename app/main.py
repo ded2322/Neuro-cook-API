@@ -15,6 +15,7 @@ from app.generate.router import router as generate_recipe_router
 from app.recipes.router import router as post_router
 from app.users.router import router as user_router
 from app.logger import logger
+
 app = FastAPI()
 admin = Admin(app, engine, authentication_backend=authentication_backend)
 

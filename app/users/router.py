@@ -67,6 +67,6 @@ async def update_data(new_name:str, user_data = Depends(get_current_user)):
     НЕ РАБОТАЕТ
     Позволяет изменить имя пользователя
     """
-    await UserDao.update_data({"name":new_name},id = user_data["name"])
+    await UserDao.update_data(user_data["id"],"name",new_name)
 
     return {"message":"вы изменили имя"}
