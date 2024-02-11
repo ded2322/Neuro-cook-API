@@ -64,7 +64,6 @@ async def delete_user(user_data = Depends(get_current_user)):
 @router.put("/change")
 async def update_data(new_name:str, user_data = Depends(get_current_user)):
     """
-    НЕ РАБОТАЕТ
     Позволяет изменить имя пользователя
     """
     await UserDao.update_data(user_data["id"],"name",new_name)
