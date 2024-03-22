@@ -2,7 +2,7 @@
 
 > [!Note]
 > Для работоспособности необходимо установить chrome
-# Neuro-cook-API 
+# Neuro cook API 
 
 Данный репозиторий представляет собой API для генерации рецептов с помощью GPT.
 
@@ -25,9 +25,10 @@ API был разработан с использованием следующи
    cd neuro_cook
    ```
 4. Поднимаем docker-compose
-   > [!Note]
-   > Падает с ошибкой устоновки filebeat 
-   > Обязательно пофикшу
+   
+> [!Note]
+> Падает с ошибкой устоновки filebeat 
+> Обязательно пофикшу
    ```commandline
     docker-compose -f docker-compose.yml up -d
    ```
